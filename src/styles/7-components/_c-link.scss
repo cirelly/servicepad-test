@@ -1,0 +1,23 @@
+.c-link{
+    color:$secondary;
+    font-family: 'Graphik-semibold';
+    font-size: to-rem(16);
+    line-height: to-rem(24);
+    position: relative;
+    cursor:pointer;
+    text-decoration: none;
+    &::after{
+        content:'';
+        background-image:url('../../../../public/static/images/home/arrow-narrow-right.svg');
+        width: to-rem(24);
+        height: to-rem(18);
+        position: absolute;
+        background-repeat: no-repeat;
+           }
+    &:hover{
+        color: $btn-hover;
+        &::after{
+            background-image:url('../../../../public/static/images/home/arrow-narrow-right-hover.svg');
+        }
+    }
+}

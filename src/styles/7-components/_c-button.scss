@@ -1,0 +1,20 @@
+.c-button{  
+    background: $btn-gradient;
+    border-style: none;
+    cursor:pointer;
+    transition: background-color .3s ease;
+    color:$white;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    box-sizing: border-box;
+    height: 45px;
+    width: 165px;
+    border-radius: 89px;
+    @include media-querie('desktop'){
+        font-size: 16px;
+    }
+    &:hover{
+        background: $btn-hover;
+    }
+}

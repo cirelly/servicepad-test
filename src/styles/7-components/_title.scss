@@ -1,0 +1,14 @@
+.c-title{
+    font-size: to-rem(14);
+    line-height: to-rem(20);
+    font-family: 'Graphik-bold';
+    color:$pink;
+    text-align: left;
+    width: 100%;
+    margin-bottom:to-rem(16);
+    @include media-querie('desktop'){
+        font-size: to-rem(18);
+        line-height: to-rem(26);
+        text-align: center;
+    }
+}

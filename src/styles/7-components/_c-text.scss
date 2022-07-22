@@ -1,0 +1,17 @@
+.c-text{
+    font-family: 'Graphik-regular';
+    font-size: to-rem(14);
+    color:$primary;
+    line-height: to-rem(22);
+    &--extra-light{
+        font-size:to-rem(12);
+        font-style: italic;
+        font-weight: 100;
+        text-align: center;
+        margin:to-rem(5) 0;
+        @include media-querie('desktop'){
+            text-align: left;
+            margin:to-rem(10) 0;
+        }
+    }
+}
