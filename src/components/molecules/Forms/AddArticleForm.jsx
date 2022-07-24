@@ -5,42 +5,62 @@ import { Field, Form, Formik } from 'formik';
 import Button from '../../atoms/buttons/Button';
 import CardWrapper from '../../atoms/cards/CardWrapper';
 import TextAreaInput from '../../atoms/inputs/TextAreaInput';
+import addArticleValidator from '../../../utils/addArticleValidator';
+import { useAddArticle } from '../../../hooks/useArticles';
 const AddArticleForm = () => {
+
+  const {mutateAsync, isLoading, isSuccess} = useAddArticle();
   return (
     <div className='c-addForm'>
         <CardWrapper Form={true}>
         <Formik
-       initialValues={{ email: '', color: 'red', firstName: '', lastName: '' }}
-       onSubmit={(values, actions) => {
-
-       }}
-     >
-        {(props) => (
-         <Form>
-           <Field name="lastName">
-             {({
-               field, // { name, value, onChange, onBlur }
-               form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
-               meta,
-             }) => (
-               <div>
-                 <Field  name="author" placeholder="Author" component={CommonInput} />
-                 <Field  name="blog-title" placeholder="Blog Title" component={CommonInput} />
-                 <Field  name="content" placeholder="Content" component={TextAreaInput} />
-                 {meta.touched && meta.error && (
-                   <div className="error">{meta.error}</div>
-                 )}
-               </div>
-             )}
-           </Field>
-           {/* <Field name="lastName" placeholder="Doe" component={MyInput} /> */}
-           <Button type="submit">Save</Button>
-         </Form>
-       )}
-     </Formik>
-        </CardWrapper>
+          initialValues={{ author: '', blogTitle: '',  content: '' }}
+          validationSchema={addArticleValidator}
+          onSubmit={async (values, actions) => {
+            try {
+              const data = {
+                "author": values.author,
+                "content": values.content,
+                "title": values.blogTitle
+              }
+              await mutateAsync(data);
+              actions.resetForm({
+                values: {
+                  blogTitle: '',
+                  author: '',
+                  content: '',
+                }});
+            } catch (error) {
+              console.log(error);
+            }
+          }}
+        >
+          {(props) => (
+          <Form>
+            <Field name="lastName">
+              {({
+                field, // { name, value, onChange, onBlur }
+                form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+                meta,
+              }) => (
+                <div>
+                  <Field value={props.values.author} name="author" placeholder="Author" component={CommonInput} />
+                  {errors.author && touched.author ? <div className='c-addForm__error'>{errors.author}</div> : null}
+                  <Field value={props.values.blogTitle} name="blogTitle" placeholder="Blog Title" component={CommonInput} />
+                  {errors.blogTitle && touched.blogTitle ? <div className='c-addForm__error'>{errors.blogTitle}</div> : null}
+                  <Field value={props.values.content} name="content" placeholder="Content" component={TextAreaInput} />
+                  {errors.content && touched.content ? <div className='c-addForm__error'>{errors.content}</div> : null}
+                </div>
+              )}
+            </Field>
+            {/* <Field name="lastName" placeholder="Doe" component={MyInput} /> */}
+            <Button type="submit" disabled={isLoading ? true : false}>Save</Button>
+          </Form>
+        )}
+      </Formik>
+    </CardWrapper>
     </div>
   )
 }
 
-export default AddArticleForm
+export default AddArticleForm;

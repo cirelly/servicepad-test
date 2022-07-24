@@ -39,9 +39,8 @@
     tr:nth-child(even) {
         background: $white;
     }
-    th:nth-child(5){
-        display: flex;
-        justify-content: center;
+    tbody tr td:nth-child(5){
+        text-align: center;
     }
     @include for-phone-only{
         display: block;

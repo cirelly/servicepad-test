@@ -11,7 +11,15 @@ export const getArticles = async () => {
     }
 }
 
-
+export const addArticle = async (articleData) => {
+    try {
+        const response = await axiosInstance.post('/articles',articleData);
+        return response.data.data;
+    } catch (error) {
+        console.log(error)
+        throw error
+    }
+}
 
 
 

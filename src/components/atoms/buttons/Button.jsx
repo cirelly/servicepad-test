@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = ({textButton, children, ...props}) => {
+const Button = ({textButton,deleteColor, disabled, children, ...props}) => {
   return (
-    <button {...props} className={`${textButton ? 'c-textButton' : 'c-button'}`}>{children}</button>
+    <button {...props} disabled={disabled} className={`${textButton ? `c-textButton${deleteColor ? '--delete': ''}` : 'c-button'}`}>{children}</button>
   )
 }
 

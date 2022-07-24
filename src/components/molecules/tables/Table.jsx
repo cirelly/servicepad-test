@@ -25,7 +25,7 @@ const Table = ({data, rowsPerPage}) => {
                 <td className=''>{el.title}</td>
                 <td className=''>{el.content}</td>
                 <td className=''>{el.date}</td>
-                <td className=''><Button textButton={true}>Edit</Button></td>
+                <td className=''><Button textButton={true}>Edit</Button> <Button textButton={true} deleteColor={true}>Delete</Button></td>
               </tr>
             ))}
           </tbody>
