@@ -3,6 +3,7 @@ import Table from '../../molecules/tables/Table'
 
 const ListArticleSection = ({data}) => {
   return (
+    <>
     <div className='c-addArticle__container'>
         <div id='title'>
             <h1>
@@ -14,6 +15,7 @@ const ListArticleSection = ({data}) => {
         </div>
         <Table data={data} rowsPerPage={6} />
     </div>
+    </>
   )
 }
 

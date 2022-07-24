@@ -1,5 +1,8 @@
 import React from 'react'
 import OnlineIcon from '../../atoms/icon/OnlineIcon';
+import BudgetingIcon from '../../atoms/icon/BudgetingIcon';
+import OnboardingIcon from '../../atoms/icon/OnboardingIcon'
+import ApiIcon from '../../atoms/icon/ApiIcon'
 import CardIconFrame from '../../molecules/Cards/CardIconFrame';
 
 const SecondSection = () => {
@@ -16,19 +19,19 @@ const SecondSection = () => {
           </h3>
           <p>Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.</p>
         </CardIconFrame>
-        <CardIconFrame Icon={OnlineIcon}>
+        <CardIconFrame Icon={BudgetingIcon}>
           <h3>
             Simple Budgeting
           </h3>
           <p>See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.</p>
         </CardIconFrame>
-        <CardIconFrame Icon={OnlineIcon}>
+        <CardIconFrame Icon={OnboardingIcon}>
           <h3>
             Fast Onboarding
           </h3>
           <p>We don’t do branches. Open your account in minutes online and start taking control of your finances right away.</p>
         </CardIconFrame>
-        <CardIconFrame Icon={OnlineIcon}>
+        <CardIconFrame Icon={ApiIcon}>
           <h3>
             Open API
           </h3>

@@ -27,7 +27,7 @@ const TableFooter = ({ range, setPage, page, slice }) => {
         </button>
       ))}
       </div>
-      {<button className={`c-arrowButton ${slice.length - 1 != page ? '': 'c-arrowButton--hidden'  }`} onClick={handleNextPage}>Next  <RightArrow /></button>}
+      {<button className={`c-arrowButton ${range.length != page ? '': 'c-arrowButton--hidden'  }`} onClick={handleNextPage}>Next  <RightArrow /></button>}
     </div>
   );
 };
