@@ -1,6 +1,18 @@
+# Hi, I'm Bryan Cirelly! 👋
+
+
 # Frontend Test - ServicePad
 
-It consists of two sections, the logic test and the frontend test.
+This is the resolution of a technical test sent by Servicepad for the position of Frontend Developer.
+- The first part corresponds to a logical test where three algorithms described in the instructions section are solved to test these solutions.
+
+- The second part of the test corresponds to replicating a mockup received by Servicepad, where ReactJS was used as the main work tool. An atomic architecture was implemented for the organization of components, scalability and reuse of components, BEMIT was implemented as a styling approach, which is a naming methodology to define the classes of the HTML nodes of our projects.
+
+Below are the guidelines to reproduce each of the stages of this technical test:
+## Demo
+
+Here you can find a live demo of the application:
+[Live Demo](https://servicepad-test.vercel.app/)
 
 
 ## Logic test
@@ -41,25 +53,27 @@ and 5, by the word "fizz buzz".
 ```
 ## Installation - FrontendTest
 
-Install my-project with npm
+Install servicepad-test with npm or yarn
 
 ```bash
   npm install
   //or
   yarn install
 ```
-    
+
+Run in dev mode
+
+```bash
+  npm run dev
+  //or
+  yarn dev
+```
 ## Tech Stack
 
 **Client:** React, SASS(BEMIT), Atomic Design, Formik, Yup, Axios,
 React-Query
 
-
-
-
-## Demo
-
-[Live Demo](https://servicepad-test.vercel.app/)
+[![My Skills](https://skills.thijs.gg/icons?i=react,scss,nodejs,figma,javascript,git,vite,&theme=light)](https://skills.thijs.gg)
 
 
 ## Environment Variables
@@ -72,3 +86,7 @@ To run this project, you will need to add the following environment variables to
 ## Authors
 
 - [@cirelly](https://github.com/cirelly)
+
+
+## 🔗 Links
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bryancirelly/)
