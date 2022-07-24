@@ -1,4 +1,5 @@
 .c-navHeader{
+  
     background-color: $white;
     position: sticky;
     width: 100%;
@@ -43,7 +44,9 @@
             top: 48px
           }
     }
-    @include media-querie('desktop'){
-
+    @include media-querie('mobile'){
+      &__container{
+        padding: 0px;
+    }
     }
 }

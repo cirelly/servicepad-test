@@ -1,15 +1,16 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Footer from '../components/organism/Footer/Footer'
-import NavBar from '../components/organism/NavBar/NavBar'
+import Footer from '../components/organism/FooterOrganism/Footer'
+import NavBar from '../components/organism/NavBarOrganism/NavBar'
 
 const Layout = ({children}) => {
   return (
-    <div>
+    <div className='c-layout'>
         <NavBar />
         {children}
         <Outlet />
         <Footer />
+        
     </div>
   )
 }

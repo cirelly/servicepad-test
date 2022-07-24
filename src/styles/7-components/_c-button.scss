@@ -18,3 +18,17 @@
         background: $btn-hover;
     }
 }
+
+.c-textButton{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: $green100;
+    border: none;
+    cursor:pointer;
+    background-color: inherit;
+    text-align: center;
+    &:hover{
+        opacity: 0.4;
+    }
+}
