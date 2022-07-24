@@ -1,8 +1,9 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
+import AddArticle from '../components/pages/AddArticle/AddArticle';
+import Home from '../components/pages/Home/Home';
 import Layout from '../layout/Layout';
 
-//TODO: add layout in routes
 const routes = () =>  [
     {
         path: '/',
@@ -10,11 +11,11 @@ const routes = () =>  [
         children: [
             {
                 path: 'add-article',
-                element: <><h1>esto es add new article</h1> <Outlet /></>
+                element: <><AddArticle /> <Outlet /></>
             },
             {
                 path: '/',
-                element: <><h1>Home mano</h1> <Outlet /></>
+                element: <><Home/> <Outlet /></>
             }
         ]
     },
