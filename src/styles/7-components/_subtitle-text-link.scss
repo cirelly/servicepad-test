@@ -1,0 +1,26 @@
+.c-subtitleTextLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media-querie('desktop'){
+        align-items: baseline;
+        width:to-rem(500);
+        padding-right: to-rem(165);
+    }
+    &--reverse{
+        @include media-querie('desktop'){
+            order:2;
+            padding-left: to-rem(140);
+            padding-right: 0;
+        }
+    }
+    &__text{
+        color:$primary;
+        font-size: to-rem(14);
+        line-height: to-rem(22);
+        font-family: 'Poppins-medium';
+    }
+    &__text-bold{
+        font-family: 'Poppins-bold';
+    }
+}

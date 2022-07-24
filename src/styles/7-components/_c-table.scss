@@ -1,0 +1,117 @@
+.c-table{
+    width: 100%;
+    background: $white;
+    border: 1px solid $gray400;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+    border-collapse: collapse; 
+    overflow: hidden;
+    border-radius: 8px;
+    max-height: 353px;
+    th {
+        padding: 12px 24px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: start;
+        color: $gray500;
+    }
+    th:nth-child(1) {
+        width: 130px;
+    }
+    th:nth-child(2) {
+        width: 220px;
+    }
+    th:nth-child(3) {
+        width: 330px;
+    }
+    td{
+        padding: 16px 24px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $gray500;
+    }
+    td:nth-child(1) {
+        color: $dark-blue;
+    }
+    tr:nth-child(odd) {
+        background: $gray50;
+    }
+    tr:nth-child(even) {
+        background: $white;
+    }
+    tbody tr td:nth-child(5){
+        text-align: center;
+    }
+    @include for-phone-only{
+        display: block;
+       overflow-x: auto;
+       max-height: 490px;
+    }
+}
+
+.c-tableFooter{
+    background-color: transparent;
+    padding: 8px 0px;
+    width: 100%;
+    font-weight: 500;
+    text-align: left;
+    font-size: 16px;
+    color: #2c3e50;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__button{
+        border: none;
+        cursor: pointer;
+        background: transparent;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: $gray500;
+        margin-right: 8px;
+        margin-left: 8px;
+
+        &--active{
+            background: transparent;
+            border-top: 2px solid $green100;
+            border-right: none;
+            border-bottom: none;
+            border-left: none;
+            color: $green100;
+            cursor: pointer;
+            background: transparent;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            margin-right: 8px;
+            margin-left: 8px;
+        }
+    }
+}
+.c-divider{
+    width: 100%;
+    border-top: 1px solid #E5E7EB;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+.c-arrowButton{
+        background: transparent;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        border: none;
+        color: $gray500;
+
+    &--hidden{
+       visibility: hidden;
+    }
+}

@@ -1,0 +1,19 @@
+.c-subtitle{
+    color:$primary;
+    text-align: center;
+    font-size: to-rem(24);
+    line-height: to-rem(30);
+    font-family: 'Poppins-bold';
+    margin-bottom: to-rem(24);
+    @include media-querie('desktop'){
+        text-align: left;
+        font-size: to-rem(32);
+        line-height: to-rem(40);
+    }
+    &--inverted{
+        text-align: left;
+        @include media-querie('desktop'){
+            text-align: center;
+        }
+    }
+}
